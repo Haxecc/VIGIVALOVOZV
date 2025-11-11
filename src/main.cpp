@@ -2,10 +2,10 @@
 
 int main(void)
 {
-  unsigned int HEIGHT = 1080;
-  unsigned int WIDTH  = 1920;
+  unsigned int HEIGHT = 600;
+  unsigned int WIDTH  = 800;
   
-  sf::RenderWindow window(sf::VideoMode({WIDTH, HEIGHT}), "VIZIVALOVOZV", sf::Style::Default, sf::State::Windowed);
+  sf::RenderWindow window(sf::VideoMode({WIDTH, HEIGHT}), "VISIVALOVOZV", sf::Style::Default, sf::State::Windowed);
   window.setFramerateLimit(60);
 
   int HERO_H = 100;
@@ -15,7 +15,7 @@ int main(void)
   sf::Texture texture("images/jojo.png");
   sf::Sprite hero(texture);
   hero.setTextureRect(sf::IntRect({0, 0}, {HERO_W, HERO_H}));
-  hero.setPosition({860, 440});
+  hero.setPosition({WIDTH/2, HEIGHT/2});
 
   const auto onClose = [&window](const sf::Event::Closed&)
   {
